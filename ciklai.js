@@ -37,7 +37,7 @@ console.log('___________________________8_ciklas_____________________________');
 // (vienas skaičius vienoje eilutėje). Paskutinis atspausdintas skaičius turi būti 5;
 let randomNr;
 
-while (randomNr != 5) {
+while (randomNr !== 5) {
     randomNr = Math.trunc(Math.random() * 11);
     console.log("Naujas random skaicius yra: ", randomNr);
 }
@@ -58,7 +58,7 @@ console.log('____________________________10_ciklas____________________________')
 // (vienas skaičius vienoje eilutėje). Paskutinis atspausdintas skaičius turi būti 5 arba 7; Suskaičiuoti kiek ciklų prasisuko;
 let IsVisoCiklu = 0;
 
-while ((randomNr != 5 ) && (randomNr != 7)) {
+while ((randomNr !== 5 ) && (randomNr !== 7)) {
     randomNr = Math.trunc(Math.random() * 11);
     console.log("Naujas random skaicius yra: ", randomNr);
     IsVisoCiklu++;

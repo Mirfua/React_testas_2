@@ -95,19 +95,54 @@ console.log('Reikia sugeneruoti x3 nelyginius skaicius... Sugeneruota nelyginiu 
 console.log('____________________________13_ciklas____________________________');
 // 13. console.log’e, naudojant ciklą atspausdinti po porą skirtingų atsitiktinių skaičių nuo 0 iki 10 
 // (abu skaičiai vienoje eilutėje). Ciklą kartoti tol, kol neiškris abu vienodi skaičiai;
+let randomNr1 = 1;
+let randomNr2 = 2;
 
-
-
-
-
-
-
-
+while (randomNr1 !== randomNr2) {
+    randomNr1 = Math.trunc(Math.random() * 11);
+    randomNr2 = Math.trunc(Math.random() * 11);
+    console.log('pirmas skaicius: ', randomNr1, 'antas skaicius: ', randomNr2);
+} 
+console.log('pirmas skaicius yra: ', randomNr1, 'o antras yra: ', randomNr1, 'kadangi iskrito abu vienodi, tai stabdyti cikla');
 console.log('____________________________14_ciklas____________________________');
 // 14. console.log’e, naudojant ciklą atspausdinti po porą skirtingų atsitiktinių skaičių nuo 0 iki 10 
 // (abu skaičiai vienoje eilutėje). Skaičiuoti abiejų skaičių sumas skirtinguose kintamuosiuose. 
 // Ciklą kartoti tol, kol kiekviena iš sumų bus daugiau nei 100
+let randomNr3 = 0;
+let randomNr4 = 1;
+
+while (randomNr3 <= 100 || randomNr4 <= 100) {
+    randomNr3 = Math.trunc(Math.random() * 10);
+    randomNr3 += randomNr4;
+    randomNr4 = Math.trunc(Math.random() * 10);
+    randomNr4 += randomNr3;
+    console.log('pirmas skaicius yra: ', randomNr3, 'antras skaicius yra: ', randomNr4);
+} 
+console.log('pirmas random skaicius yra: ', randomNr3, 'o antras random skaius yra: ', randomNr4, 'stabdyti cikla kdangi abieju skaiciu sumos yra daugiau negu 100');
+
 console.log('____________________________15_ciklas____________________________');
 // 15. console.log’e, naudojant ciklą atspausdinti po porą skirtingų atsitiktinių skaičių nuo 0 iki 10 
 // (abu skaičiai vienoje eilutėje). Ciklą kartoti kol bus sugeneruota po tris arba daugiau nelyginių skaičių.
+
+
+
+
+// let randomNr5 = 1;
+// let randomNr6 = 0;
+
+// while (randomNr5 <= 3 && randomNr6 <= 3) {
+//     randomNr5 = Math.trunc(Math.random() * 11);
+//     randomNr6 = Math.trunc(Math.random() * 11);
+//     console.log('pirmas skaicius yra: ', randomNr5, 'antras skaicius yra: ', randomNr6);
+//     if (randomNr5 % 2 != 1 || randomNr6 % 2 != 1) {
+//         randomNr5++;
+//         randomNr6++;
+//         // console.log('pirmas skaicius yra: ', randomNr5, 'antras skaicius yra: ', randomNr6);
+//     }
+// }    
+// console.log('Kadangi pirmas random skaicius turi: ', randomNr5, 'nelyginius, o antras random skaius turi: ', randomNr6, 'stabdyti cikla (abu skaiciai turi po 3 ar daugiau nelyginiu skaiciu)');
+
+
+
+
 console.log('________________________________END_______________________________');

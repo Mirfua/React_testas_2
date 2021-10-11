@@ -87,7 +87,7 @@ let = trisNelyginiaiSk = 0;
 while (trisNelyginiaiSk < 3) {
     randomNr = Math.trunc(Math.random() * 11);
     console.log("Naujas random skaicius yra: ", randomNr);
-    if (randomNr % 2 != 0) {
+    if (randomNr % 2 !== 0) {
         trisNelyginiaiSk++;
     }
 }
@@ -127,17 +127,17 @@ console.log('____________________________15_ciklas____________________________')
 
 
 
-// let randomNr5 = 1;
+// let randomNr5 = 0;
 // let randomNr6 = 0;
 
-// while (randomNr5 <= 3 && randomNr6 <= 3) {
+// while (randomNr5 < 3 && randomNr6 < 3) {
 //     randomNr5 = Math.trunc(Math.random() * 11);
 //     randomNr6 = Math.trunc(Math.random() * 11);
 //     console.log('pirmas skaicius yra: ', randomNr5, 'antras skaicius yra: ', randomNr6);
-//     if (randomNr5 % 2 != 1 || randomNr6 % 2 != 1) {
+//     if (randomNr5 % 2 !== 1 || randomNr6 % 2 !== 1) {
 //         randomNr5++;
 //         randomNr6++;
-//         // console.log('pirmas skaicius yra: ', randomNr5, 'antras skaicius yra: ', randomNr6);
+//         console.log('pirmas skaicius yra: ', randomNr5, 'antras skaicius yra: ', randomNr6);
 //     }
 // }    
 // console.log('Kadangi pirmas random skaicius turi: ', randomNr5, 'nelyginius, o antras random skaius turi: ', randomNr6, 'stabdyti cikla (abu skaiciai turi po 3 ar daugiau nelyginiu skaiciu)');

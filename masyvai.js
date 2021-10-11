@@ -19,18 +19,28 @@ piniginesSkaiciai.forEach((number) => {
 });
 console.log('Pinigines visu skaiciu suma yra: ', sumaNr);
 console.log('______________________________3_Masyvas____________________________');
-// 3. Naudojant ciklą apskaičiuoti masyvo iš 1 
-// uždavinio popierinių pinigų (skaičių didesnių už 2 ) reikšmių sumą;
+// 3. Naudojant ciklą apskaičiuoti masyvo iš 1 uždavinio popierinių pinigų 
+// (skaičių didesnių už 2 ) reikšmių sumą;
+let sumaNr1 = 0;
 
-
-
-
-
-
-
-// console.log('______________________________4_Masyvas____________________________');
+piniginesSkaiciai.forEach((number) => {
+    if (2 < number) sumaNr1 += number;
+});
+console.log('Pinigines visu skaiciu (kurie yra daugiau negu 2) suma: ', sumaNr1);
+console.log('______________________________4_Masyvas____________________________');
 // 4. Išleisti visus metalinius pinigus (reikšmes, kurios 
 // yra mažesnės arba lygios 2 padaryti lygias 0) iš 1 uždavinio;
+
+
+// function isBigEnough(value) {
+//     return value >= 3
+// } 
+// let n = [].filter(isBigEnough)
+
+
+// console.log(piniginesSkaiciai);
+
+
 
 // console.log('______________________________5_Masyvas____________________________');
 // 5. Surasti didžiausią reikšmę 1 uždavinio masyve ir paskaičiuoti 

@@ -123,26 +123,24 @@ console.log('pirmas random skaicius yra: ', randomNr3, 'o antras random skaius y
 console.log('____________________________15_ciklas____________________________');
 // 15. console.log’e, naudojant ciklą atspausdinti po porą skirtingų atsitiktinių skaičių nuo 0 iki 10 
 // (abu skaičiai vienoje eilutėje). Ciklą kartoti kol bus sugeneruota po tris arba daugiau nelyginių skaičių.
+let evenNumb = [];
+let randomNr5 = 0;
+let randomNr6 = 0;
 
-
-
-
-// let randomNr5 = 0;
-// let randomNr6 = 0;
-
-// while (randomNr5 < 3 && randomNr6 < 3) {
-//     randomNr5 = Math.trunc(Math.random() * 11);
-//     randomNr6 = Math.trunc(Math.random() * 11);
-//     console.log('pirmas skaicius yra: ', randomNr5, 'antras skaicius yra: ', randomNr6);
-//     if (randomNr5 % 2 !== 1 || randomNr6 % 2 !== 1) {
-//         randomNr5++;
-//         randomNr6++;
-//         console.log('pirmas skaicius yra: ', randomNr5, 'antras skaicius yra: ', randomNr6);
-//     }
-// }    
-// console.log('Kadangi pirmas random skaicius turi: ', randomNr5, 'nelyginius, o antras random skaius turi: ', randomNr6, 'stabdyti cikla (abu skaiciai turi po 3 ar daugiau nelyginiu skaiciu)');
-
-
-
-
+while (evenNumb.length <= 3) {
+    randomNr5 = Math.trunc(Math.random() * 11);
+    randomNr6 = Math.trunc(Math.random() * 11);
+    console.log(
+        "pirmas skaicius yra: ",
+        randomNr5,
+        "antras skaicius yra: ",
+        randomNr6
+        );
+        if (randomNr5 % 2 !== 0 ) {
+            evenNumb.push(randomNr5);
+        } else if (randomNr6 % 2 !== 0) {
+            evenNumb.push(randomNr6);
+        }
+    }
+console.log('Buvo sugeneruoti sitos nelygines reiksmes: ', evenNumb , 'stabdyti cikla, kadangi yra 3 ar daugiau nelyginiu skaiciu...');
 console.log('________________________________END_______________________________');

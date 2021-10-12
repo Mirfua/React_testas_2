@@ -71,7 +71,7 @@ console.log('____________________________11_ciklas____________________________')
 let maxSuma20 = 0;
 let neAnksciau11Ciklu = 0;
 
-while (maxSuma20 < 20 || neAnksciau11Ciklu <= 11) {
+while (maxSuma20 < 20 || neAnksciau11Ciklu < 11) {
     randomNr += Math.trunc(Math.random() * 11);
     console.log("Naujas random skaicius yra: ", randomNr);
     maxSuma20 += randomNr;

@@ -30,31 +30,40 @@ console.log('Pinigines visu skaiciu (kurie yra daugiau negu 2) suma: ', sumaNr1)
 console.log('______________________________4_Masyvas____________________________');
 // 4. Išleisti visus metalinius pinigus (reikšmes, kurios 
 // yra mažesnės arba lygios 2 padaryti lygias 0) iš 1 uždavinio;
-
-
-// function isBigEnough(value) {
-//     return value >= 3
-// } 
-// let n = [].filter(isBigEnough)
-
-
-// console.log(piniginesSkaiciai);
-
-
-
-// console.log('______________________________5_Masyvas____________________________');
+for ( let i = 0; i < piniginesSkaiciai.length; i++) {
+    if (piniginesSkaiciai[i] <= 2)
+    piniginesSkaiciai[i] = 0;
+}
+console.log("Pinigu likuciai isleidus visus metalinius pinigus(monetos <=2): ", piniginesSkaiciai);
+console.log('______________________________5_Masyvas____________________________');
 // 5. Surasti didžiausią reikšmę 1 uždavinio masyve ir paskaičiuoti 
 // kiek tokių didžiausių reikšmių masyve yra;
+// let maxPiniguNr = 0;
+// let kiekMaxPinigu = 0;
 
-// console.log('______________________________6_Masyvas____________________________');
+// for ( let i = 0; i < piniginesSkaiciai.length; i++) {
+
+// }
+
+// console.log('Didziausia pinigu reiksme yra: ', maxPiniguNr, 'o ju kiekis yra: ', kiekMaxPinigu);
+
+console.log('______________________________6_Masyvas____________________________');
 // 6. Visus masyvo elementus, kurie yra lygūs 0, pakeisti į 
 // tų elementų indeksų (vietų, numerių) reikšmes;
-
-// console.log('______________________________7_Masyvas____________________________');
+for (let i = 0; i < lenghtNr; i++) {
+    if(piniginesSkaiciai[i] === 0) {
+        piniginesSkaiciai[i] = i;
+    }
+}
+console.log("Visi pinigai(skaiciau) kurie buvo lygus 0 pakeisti i ju indexsu reiksmes: ", piniginesSkaiciai);
+console.log('______________________________7_Masyvas____________________________');
 // 7. Į 1 uždavinio masyvą pridėti tiek naujų reikšmių 
 // (pinigų, atsitiktinių skaičių nuo 0 iki 10), kad masyvo ilgis būtų lygiai 30;
-
-// console.log('______________________________8_Masyvas____________________________');
+for (let i = lenghtNr; i < 30; i++) {
+    piniginesSkaiciai[i] = Math.trunc(Math.random() * (30 - 10 + 1) + 10);
+}
+console.log("Prideti nauji pinigai(atsitiktiniai skaiciai) tol kol surenkam bendrai 30 vnt.(kupiuros+monetos): ", piniginesSkaiciai);
+console.log('______________________________8_Masyvas____________________________');
 // 8. Naudojant 1 uždavinio masyvą iš jo reikšmių sukurti dar du papildomus masyvus. 
 // Į vieną iš 1 uždavinio masyvo pridėti reikšmes mažesnes arba lygias 2 (monetas), 
 // o į kitą didesnes nei 2 (popierinius pinigus);

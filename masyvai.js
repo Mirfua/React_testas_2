@@ -34,24 +34,28 @@ for ( let i = 0; i < piniginesSkaiciai.length; i++) {
     if (piniginesSkaiciai[i] <= 2)
     piniginesSkaiciai[i] = 0;
 }
-console.log("Pinigu likuciai isleidus visus metalinius pinigus(monetos <=2): ", piniginesSkaiciai);
+console.log("'Pinigu likuciai' = O isleidus visus metalinius pinigus kuriu reiksmes yra <=2): ", piniginesSkaiciai);
 console.log('______________________________5_Masyvas____________________________');
 // 5. Surasti didžiausią reikšmę 1 uždavinio masyve ir paskaičiuoti 
 // kiek tokių didžiausių reikšmių masyve yra;
-// let maxPiniguNr = 0;
-// let kiekMaxPinigu = 0;
+let maxPiniguNr = 0;
+let kiekMaxPinigu = 0;
 
-// for ( let i = 0; i < piniginesSkaiciai.length; i++) {
-
-// }
-
-// console.log('Didziausia pinigu reiksme yra: ', maxPiniguNr, 'o ju kiekis yra: ', kiekMaxPinigu);
-
+for (let i = 0; i < lenghtNr; i++) {
+    if (piniginesSkaiciai[i] > maxPiniguNr) {
+        maxPiniguNr = piniginesSkaiciai[i];
+        kiekMaxPinigu = 0;
+    }
+    if (piniginesSkaiciai[i] === maxPiniguNr) {
+        kiekMaxPinigu++;
+    }
+}
+console.log('Didziausia pinigu reiksme yra: ', maxPiniguNr, 'o ju kiekis yra: ', kiekMaxPinigu);
 console.log('______________________________6_Masyvas____________________________');
 // 6. Visus masyvo elementus, kurie yra lygūs 0, pakeisti į 
 // tų elementų indeksų (vietų, numerių) reikšmes;
 for (let i = 0; i < lenghtNr; i++) {
-    if(piniginesSkaiciai[i] === 0) {
+    if (piniginesSkaiciai[i] === 0) {
         piniginesSkaiciai[i] = i;
     }
 }
@@ -60,26 +64,56 @@ console.log('______________________________7_Masyvas____________________________
 // 7. Į 1 uždavinio masyvą pridėti tiek naujų reikšmių 
 // (pinigų, atsitiktinių skaičių nuo 0 iki 10), kad masyvo ilgis būtų lygiai 30;
 for (let i = lenghtNr; i < 30; i++) {
-    piniginesSkaiciai[i] = Math.trunc(Math.random() * (30 - 10 + 1) + 10);
+    piniginesSkaiciai[i] = Math.trunc(Math.random() * (30 - 10) + 10);
 }
 console.log("Prideti nauji pinigai(atsitiktiniai skaiciai) tol kol surenkam bendrai 30 vnt.(kupiuros+monetos): ", piniginesSkaiciai);
 console.log('______________________________8_Masyvas____________________________');
 // 8. Naudojant 1 uždavinio masyvą iš jo reikšmių sukurti dar du papildomus masyvus. 
 // Į vieną iš 1 uždavinio masyvo pridėti reikšmes mažesnes arba lygias 2 (monetas), 
 // o į kitą didesnes nei 2 (popierinius pinigus);
+let smulkiosMonetos = [];
+let popieriniaiPinigai = [];
 
-// console.log('______________________________9_Masyvas____________________________');
+for (let i = 0; i < piniginesSkaiciai.length; i++) { 
+    if (piniginesSkaiciai[i] <= 2) {
+        smulkiosMonetos.push(piniginesSkaiciai[i])
+    } else {
+        popieriniaiPinigai.push(piniginesSkaiciai[i])
+    }
+}
+console.log('Visos monetos: ', smulkiosMonetos);
+console.log('Visi popieriniai pinigai: ', popieriniaiPinigai);
+console.log('______________________________9_Masyvas____________________________');
 // 9.Sukurti masyvą (piniginę su dviem skyreliais) iš dviejų elementų, 
 // kurio pirmas elementas būtų masyvas iš 8 uždavinio su monetom, o antras 
 // elementas masyvas iš 8 uždavinio su popieriniais pinigais;
+let pinigineSu2Skyreliais = [];
 
-// console.log('______________________________10_Masyvas____________________________');
+pinigineSu2Skyreliais.push(smulkiosMonetos);
+pinigineSu2Skyreliais.push(popieriniaiPinigai);
+
+console.log("Nauja pinigine su dviem skyreliais: ", pinigineSu2Skyreliais);
+console.log('______________________________10_Masyvas____________________________');
 // 10. Į 9 uždavinio masyvą, piniginę su dviem skyreliais, pridėti 
 // trečią skyrelį- masyvą su kortelėm: ['KIKA', 'Euro Vaistinė', 'Drogas', 'Ačiū', 'Lietuvos Geležinkeliai', 'Mano RIMI'];
+let korteles = ['KIKA', 'Euro Vaistinė', 'Drogas', 'Ačiū', 'Lietuvos Geležinkeliai', 'Mano RIMI'];
+let pinigineSu3Skyreliais = pinigineSu2Skyreliais;
 
-// console.log('______________________________11_Masyvas____________________________');
+pinigineSu3Skyreliais.push(korteles);
+
+console.log("Nauja pinigine su trimis skyreliais pridejus korteles: ", pinigineSu3Skyreliais);
+console.log('______________________________11_Masyvas____________________________');
 // 11.Korteles skyrelyje sudėlioti (išrūšiuoti) pagal abėcėlę;
 
+
+
+
+
+// pinigineSu3Skyreliais.sort();
+
+
+
+console.log("Korteles surusiuotos pagal abeceles tvarka: ", pinigineSu3Skyreliais);
 // console.log('______________________________12_Masyvas____________________________');
 // 12. Į kortelių skyrelį pridėti mokėjimo kortelių 'MasterCard', 'Visa' 
 // (su rand generuokite atsitiktines reikšmes 'MasterCard' arba 'Visa' ir rašykite į masyvą) 

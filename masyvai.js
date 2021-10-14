@@ -105,19 +105,22 @@ console.log("Nauja pinigine su trimis skyreliais pridejus korteles: ", pinigineS
 console.log('______________________________11_Masyvas____________________________');
 // 11.Korteles skyrelyje sudėlioti (išrūšiuoti) pagal abėcėlę;
 
+// korteles.sort();     // (ez... tiesiog surusioju koteliu masyva naudojant .sort()...)
+pinigineSu3Skyreliais[2].sort();   //(2 varijantas, bet irgi paprastas :D )
 
-
-
-
-// pinigineSu3Skyreliais.sort();
-
-
-
+// console.log("Korteles surusiuotos pagal abeceles tvarka: ", korteles); 
 console.log("Korteles surusiuotos pagal abeceles tvarka: ", pinigineSu3Skyreliais);
-// console.log('______________________________12_Masyvas____________________________');
+console.log('______________________________12_Masyvas____________________________');
 // 12. Į kortelių skyrelį pridėti mokėjimo kortelių 'MasterCard', 'Visa' 
 // (su rand generuokite atsitiktines reikšmes 'MasterCard' arba 'Visa' ir rašykite į masyvą) 
 // iš skirtingų bankų tiek, kad skyrelis (masyvo ilgis) pasidarytų lygus 20;
+
+
+
+
+
+
+
 
 // console.log('______________________________13_Masyvas____________________________');
 // 13. Paskaičiuokite, kokio tipo kortelių ('MasterCard' arba 'Visa') yra daugiau;

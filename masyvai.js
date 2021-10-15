@@ -30,6 +30,7 @@ console.log('Pinigines visu skaiciu (kurie yra daugiau negu 2) suma: ', sumaNr1)
 console.log('______________________________4_Masyvas____________________________');
 // 4. Išleisti visus metalinius pinigus (reikšmes, kurios 
 // yra mažesnės arba lygios 2 padaryti lygias 0) iš 1 uždavinio;
+
 for ( let i = 0; i < piniginesSkaiciai.length; i++) {
     if (piniginesSkaiciai[i] <= 2)
     piniginesSkaiciai[i] = 0;
@@ -54,6 +55,7 @@ console.log('Didziausia pinigu reiksme yra: ', maxPiniguNr, 'o ju kiekis yra: ',
 console.log('______________________________6_Masyvas____________________________');
 // 6. Visus masyvo elementus, kurie yra lygūs 0, pakeisti į 
 // tų elementų indeksų (vietų, numerių) reikšmes;
+
 for (let i = 0; i < lenghtNr; i++) {
     if (piniginesSkaiciai[i] === 0) {
         piniginesSkaiciai[i] = i;
@@ -63,6 +65,7 @@ console.log("Visi pinigai(skaiciau) kurie buvo lygus 0 pakeisti i ju indexsu rei
 console.log('______________________________7_Masyvas____________________________');
 // 7. Į 1 uždavinio masyvą pridėti tiek naujų reikšmių 
 // (pinigų, atsitiktinių skaičių nuo 0 iki 10), kad masyvo ilgis būtų lygiai 30;
+
 for (let i = lenghtNr; i < 30; i++) {
     piniginesSkaiciai[i] = Math.trunc(Math.random() * (30 - 10) + 10);
 }
@@ -104,34 +107,58 @@ pinigineSu3Skyreliais.push(korteles);
 console.log("Nauja pinigine su trimis skyreliais pridejus korteles: ", pinigineSu3Skyreliais);
 console.log('______________________________11_Masyvas____________________________');
 // 11.Korteles skyrelyje sudėlioti (išrūšiuoti) pagal abėcėlę;
+// korteles.sort();
+pinigineSu3Skyreliais[2].sort();   //(2 varijantas, bet irgi paprastas suvokti :D )
 
-// korteles.sort();     // (ez... tiesiog surusioju koteliu masyva naudojant .sort()...)
-pinigineSu3Skyreliais[2].sort();   //(2 varijantas, bet irgi paprastas :D )
-
-// console.log("Korteles surusiuotos pagal abeceles tvarka: ", korteles); 
 console.log("Korteles surusiuotos pagal abeceles tvarka: ", pinigineSu3Skyreliais);
 console.log('______________________________12_Masyvas____________________________');
 // 12. Į kortelių skyrelį pridėti mokėjimo kortelių 'MasterCard', 'Visa' 
 // (su rand generuokite atsitiktines reikšmes 'MasterCard' arba 'Visa' ir rašykite į masyvą) 
 // iš skirtingų bankų tiek, kad skyrelis (masyvo ilgis) pasidarytų lygus 20;
 
-
-
-
-
-
-
-
-// console.log('______________________________13_Masyvas____________________________');
+for (let i = pinigineSu3Skyreliais[2].length; i < 20; i++) {
+    if (Math.trunc(Math.random() * 2) < 1) {
+        pinigineSu3Skyreliais[2].push('MasterCard')
+    } else {
+        pinigineSu3Skyreliais[2].push('Visa');
+    }
+}
+console.log('pridetas papildomai random "MasterCard" ir "Visa" korteliu kiekis ir jomis uzpildom masyva iki 20 vnt.: ', pinigineSu3Skyreliais);
+console.log('______________________________13_Masyvas____________________________');
 // 13. Paskaičiuokite, kokio tipo kortelių ('MasterCard' arba 'Visa') yra daugiau;
+// let totalVisa = 0;
+// let totalMaster = 0;
 
+// for (let i = 0; i < pinigineSu3Skyreliais[2].length; i++) {
+//     if (pinigineSu3Skyreliais[2].length === 'MasterCard') {
+//         totalVisa++;
+//     }
+//     if (pinigineSu3Skyreliais[2].length === 'Visa') {
+//         totalMaster++;
+//     }
+// }
+// console.log("Visa korteliu: ", totalVisa, "MasterCard korteliu: ", totalMaster);
 // console.log('______________________________14_Masyvas____________________________');
 // 14. Sukurkite masyve (piniginėje) ketvirtą elementą (skyrelį) į kurį įdėkite 10 loterijos bilietų, 
 // kurių numerius sugeneruokite atsitiktinai su rand funkcija nuo 1000000000 iki 9999999999;
+let loterijosBilietai = [];
 
-// console.log('______________________________15_Masyvas____________________________');
+for (let i = 0; i < 10; i++) {
+    let biletuRandomReiksmes = Math.trunc(Math.random() * (9999999999 - 1000000000) + 1000000000);
+    loterijosBilietai.push(biletuRandomReiksmes);
+}
+pinigineSu3Skyreliais.push(loterijosBilietai);
+console.log("'biletu' masyvo pridejimas kaip 4-ojo pinigines elementu idejimas: ", pinigineSu3Skyreliais);
+console.log('______________________________15_Masyvas____________________________');
 // 15. Loterijos bilietų masyvą išrūšiuoti nuo didžiausio numerio iki mažiausio;
 
+pinigineSu4Skyreliais = pinigineSu3Skyreliais;
+
+pinigineSu4Skyreliais[3].sort(function(a, b) {
+    return b - a;
+});
+
+console.log("Biletai surusiuoti nuo didziausio iki maziausio: ", pinigineSu4Skyreliais);
 // console.log('______________________________16_Masyvas____________________________');
 // 16. Į piniginės popierinių pinigų skyrelį įdėti 500 pinigų mažom kupiūrom 
 // ( generuoti atsitiktinius skaičius nuo 3 iki 10 ir dėti kaip naujus elementus, kol įdėta suma bus lygi 500);

@@ -151,17 +151,23 @@ pinigineSu3Skyreliais.push(loterijosBilietai);
 console.log("'biletu' masyvo pridejimas kaip 4-ojo pinigines elementu idejimas: ", pinigineSu3Skyreliais);
 console.log('______________________________15_Masyvas____________________________');
 // 15. Loterijos bilietų masyvą išrūšiuoti nuo didžiausio numerio iki mažiausio;
-
-pinigineSu4Skyreliais = pinigineSu3Skyreliais;
+let pinigineSu4Skyreliais = pinigineSu3Skyreliais;
 
 pinigineSu4Skyreliais[3].sort(function(a, b) {
     return b - a;
-});
-
+}
+);
 console.log("Biletai surusiuoti nuo didziausio iki maziausio: ", pinigineSu4Skyreliais);
 // console.log('______________________________16_Masyvas____________________________');
 // 16. Į piniginės popierinių pinigų skyrelį įdėti 500 pinigų mažom kupiūrom 
 // ( generuoti atsitiktinius skaičius nuo 3 iki 10 ir dėti kaip naujus elementus, kol įdėta suma bus lygi 500);
+
+
+
+
+
+
+
 
 // console.log('______________________________17_Masyvas____________________________');
 // 17. Patikrinti ar ką nors laimėjote. Bilieto numerius dalinkite iš 777 

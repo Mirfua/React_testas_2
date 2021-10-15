@@ -130,10 +130,10 @@ let totalVisa = 0;
 let totalMaster = 0;
 
 for (let i = 0; i < korteles.length; ++i) {
-    if (korteles[i] === 'MasterCard') {
+    if (korteles[i] === 'Visa') {
         totalVisa++;
     }
-    if (korteles[i] === 'Visa') {
+    if (korteles[i] === 'MasterCard') {
         totalMaster++;
     }
 }

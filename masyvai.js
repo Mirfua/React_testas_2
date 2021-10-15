@@ -126,19 +126,19 @@ for (let i = pinigineSu3Skyreliais[2].length; i < 20; i++) {
 console.log('pridetas papildomai random "MasterCard" ir "Visa" korteliu kiekis ir jomis uzpildom masyva iki 20 vnt.: ', pinigineSu3Skyreliais);
 console.log('______________________________13_Masyvas____________________________');
 // 13. Paskaičiuokite, kokio tipo kortelių ('MasterCard' arba 'Visa') yra daugiau;
-// let totalVisa = 0;
-// let totalMaster = 0;
+let totalVisa = 0;
+let totalMaster = 0;
 
-// for (let i = 0; i < pinigineSu3Skyreliais[2].length; i++) {
-//     if (pinigineSu3Skyreliais[2].length === 'MasterCard') {
-//         totalVisa++;
-//     }
-//     if (pinigineSu3Skyreliais[2].length === 'Visa') {
-//         totalMaster++;
-//     }
-// }
-// console.log("Visa korteliu: ", totalVisa, "MasterCard korteliu: ", totalMaster);
-// console.log('______________________________14_Masyvas____________________________');
+for (let i = 0; i < korteles.length; ++i) {
+    if (korteles[i] === 'MasterCard') {
+        totalVisa++;
+    }
+    if (korteles[i] === 'Visa') {
+        totalMaster++;
+    }
+}
+console.log("Visa korteliu: ", totalVisa, "MasterCard korteliu: ", totalMaster);
+console.log('______________________________14_Masyvas____________________________');
 // 14. Sukurkite masyve (piniginėje) ketvirtą elementą (skyrelį) į kurį įdėkite 10 loterijos bilietų, 
 // kurių numerius sugeneruokite atsitiktinai su rand funkcija nuo 1000000000 iki 9999999999;
 let loterijosBilietai = [];

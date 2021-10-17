@@ -107,8 +107,9 @@ pinigineSu3Skyreliais.push(korteles);
 console.log("Nauja pinigine su trimis skyreliais pridejus korteles: ", pinigineSu3Skyreliais);
 console.log('______________________________11_Masyvas____________________________');
 // 11.Korteles skyrelyje sudėlioti (išrūšiuoti) pagal abėcėlę;
+
 // korteles.sort();
-pinigineSu3Skyreliais[2].sort();   //(2 varijantas, bet irgi paprastas suvokti :D )
+pinigineSu3Skyreliais[2].sort();
 
 console.log("Korteles surusiuotos pagal abeceles tvarka: ", pinigineSu3Skyreliais);
 console.log('______________________________12_Masyvas____________________________');
@@ -155,24 +156,46 @@ let pinigineSu4Skyreliais = pinigineSu3Skyreliais;
 
 pinigineSu4Skyreliais[3].sort(function(a, b) {
     return b - a;
-}
-);
+});
 console.log("Biletai surusiuoti nuo didziausio iki maziausio: ", pinigineSu4Skyreliais);
-// console.log('______________________________16_Masyvas____________________________');
+console.log('______________________________16_Masyvas____________________________');
 // 16. Į piniginės popierinių pinigų skyrelį įdėti 500 pinigų mažom kupiūrom 
 // ( generuoti atsitiktinius skaičius nuo 3 iki 10 ir dėti kaip naujus elementus, kol įdėta suma bus lygi 500);
+let piniguSuma = 0;
+let kupiura;
+let visosNaujosKupiuros = [];
 
+while (piniguSuma < 500) {
+    kupiura = Math.trunc(Math.random() * (10 - 3) + 3);
+    piniguSuma += kupiura;
+    visosNaujosKupiuros.push(kupiura);
+    if (piniguSuma > 500) {
+        piniguSuma = 0;
+        visosNaujosKupiuros = [];
+    }
+}
+Array.prototype.push.apply(popieriniaiPinigai, visosNaujosKupiuros);
 
-
-
-
-
-
-
-// console.log('______________________________17_Masyvas____________________________');
+console.log("i popierine pinigine prideta papildomaij 500 suma kurios kupiuros yra nuo 3 iki 10: ", pinigineSu4Skyreliais);
+console.log('______________________________17_Masyvas____________________________');
 // 17. Patikrinti ar ką nors laimėjote. Bilieto numerius dalinkite iš 777 
 // ir jeigu numeris išsidalins be liekanos - jūs laimėjote! Suskaičiuokite, kiek buvo laimingų bilietų.
+let laimingiBiletai = 0;
 
-// console.log('______________________________18_Masyvas____________________________');
+for (let i = 0; i < pinigineSu4Skyreliais[3].length; i++) {
+    if (pinigineSu4Skyreliais[3][i] % 777 === 0) {
+        laimingiBiletai++
+    }
+}
+console.log('Laimingi bilietai: ', laimingiBiletai);
+console.log('______________________________18_Masyvas____________________________');
 // 18. Sukurkite penktą skyrelį ir į jį sudėkite nuotraukas: ['šuo', 'katė', 'automobilis', 'namas', 'kiemas'] 
 // ir jas išrūšiuokite pagal žodžių ilgį taip, kad pirma eitų trumpiausi žodžiai;
+
+pinigineSu4Skyreliais.push(['šuo', 'katė', 'automobilis', 'namas', 'kiemas']);
+let pinigineSu5Skyreliais = pinigineSu4Skyreliais
+
+pinigineSu4Skyreliais[4].sort(function(a, b) {
+    return b.length - a.length;
+});
+console.log('Nauja pinigine su 5 skyrialais: ', pinigineSu5Skyreliais);

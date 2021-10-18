@@ -196,6 +196,6 @@ pinigineSu4Skyreliais.push(['šuo', 'katė', 'automobilis', 'namas', 'kiemas']);
 let pinigineSu5Skyreliais = pinigineSu4Skyreliais
 
 pinigineSu4Skyreliais[4].sort(function(a, b) {
-    return b.length - a.length;
+    return a.length - b.length;
 });
 console.log('Nauja pinigine su 5 skyrialais: ', pinigineSu5Skyreliais);
